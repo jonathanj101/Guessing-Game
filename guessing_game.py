@@ -48,7 +48,7 @@ def start_game():
                         high_score = min(previous_game_score, attempt)
                         solution = random.randint(1, 10)
                         print("\nScore to beat: {} ".format(
-                            previous_game_score))
+                            high_score))
 
                     else:
                         high_score = attempt
