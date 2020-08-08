@@ -9,10 +9,9 @@ def start_game():
 
     solution = random.randint(1, 10)
     attempt = 1
-    high_score = 0
-    previous_game_score = 0
 
     while True:
+        print(solution)
         try:
             guessing = int(input("\nPick a number between 1 and 10: "))
             if guessing < 1 or guessing > 10:
@@ -29,6 +28,7 @@ def start_game():
 
             else:
                 current_score = attempt
+                high_score = min([current_score])
                 if attempt == 1:
                     print("\nYou guessed it right in {} try!\n".format(attempt))
                     print("\nYour score is {}".format(
@@ -43,18 +43,18 @@ def start_game():
                         "\nWould you like to play again? Yes/No ")
 
                     if another_try.lower()[0] == "y":
-                        previous_game_score = current_score
+                        #previous_game_score = current_score
                         attempt = 1
-                        high_score = min(previous_game_score, attempt)
                         solution = random.randint(1, 10)
                         print("\nScore to beat: {} ".format(
                             high_score))
 
                     else:
-                        high_score = attempt
-                        if high_score < previous_game_score:
+                        if high_score < current_score:
                             print(
                                 "\nCongratulations! You broke the record!\n\nNew Score {}.\n\nOnly took you {} try. Till next time!\n".format(high_score, attempt))
+                        elif high_score == 1:
+                            print("You are the Champion of this Game!")
 
                         else:
                             print("\nThank you for playing! Till next time!\n")
