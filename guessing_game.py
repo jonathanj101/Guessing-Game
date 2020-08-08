@@ -9,7 +9,7 @@ def start_game():
 
     solution = random.randint(1, 10)
     attempt = 1
-    high_score = 1
+    high_score = 0
     previous_game_score = 0
 
     while True:
