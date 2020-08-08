@@ -45,6 +45,7 @@ def start_game():
                     if another_try.lower()[0] == "y":
                         previous_game_score = current_score
                         attempt = 1
+                        high_score = min(previous_game_score, attempt)
                         solution = random.randint(1, 10)
                         print("\nScore to beat: {} ".format(
                             previous_game_score))
