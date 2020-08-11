@@ -9,6 +9,7 @@ def start_game():
 
     solution = random.randint(1, 10)
     attempt = 1
+    score = []
 
     while True:
         print(solution)
@@ -28,7 +29,7 @@ def start_game():
 
             else:
                 current_score = attempt
-                high_score = min([current_score])
+                score.append(attempt)
                 if attempt == 1:
                     print("\nYou guessed it right in {} try!\n".format(attempt))
                     print("\nYour score is {}".format(
@@ -47,14 +48,15 @@ def start_game():
                         attempt = 1
                         solution = random.randint(1, 10)
                         print("\nScore to beat: {} ".format(
-                            high_score))
+                            min(score)))
 
                     else:
+                        high_score = min(score)
                         if high_score < current_score:
                             print(
                                 "\nCongratulations! You broke the record!\n\nNew Score {}.\n\nOnly took you {} try. Till next time!\n".format(high_score, attempt))
                         elif high_score == 1:
-                            print("You are the Champion of this Game!")
+                            print("\nYou are the Champion of this Game!\n")
 
                         else:
                             print("\nThank you for playing! Till next time!\n")
