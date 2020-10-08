@@ -12,7 +12,6 @@ def start_game():
     score = []
 
     while True:
-        print(solution)
         try:
             guessing = int(input("\nPick a number between 1 and 10: "))
             if guessing < 1 or guessing > 10:
