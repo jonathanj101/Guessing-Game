@@ -10,4 +10,4 @@ My first project with Python Programming languange. Although challenging, handli
 
 # Author
 
-**Jonathan Jimenez** - Full Stack Software Developer [LinkedIn](https://www.linkedin.com/in/jonathan-jimenez101/) | [Website](https://codepen.io/jonathanj101/)
+**Jonathan Jimenez** - Full Stack Software Developer [LinkedIn](https://www.linkedin.com/in/jonathan-jimenez101/) | [Website](https://www.jonathanjimenez.tech)
